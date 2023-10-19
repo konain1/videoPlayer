@@ -16,9 +16,84 @@
             </div>
         </div>
         <div class="videolist">
+            <div class="vidcard active">
+                <video autoplay muted  src="./10 second intro music.mp4"></video>
+                <h3 class="title">01 first video</h3>
+            </div>
             <div class="vidcard">
                 <video autoplay muted  src="./10 second intro music.mp4"></video>
-                <h3 class="title">02 first video</h3>
+                <h3 class="title">03 first video</h3>
+            </div>
+            <div class="vidcard">
+                <video autoplay muted  src="./10 second intro music.mp4"></video>
+                <h3 class="title">04 first video</h3>
+            </div>
+            <div class="vidcard">
+                <video autoplay muted  src="./10 second intro music.mp4"></video>
+                <h3 class="title">05 first video</h3>
+            </div>
+
+            <div class="vidcard">
+                <video autoplay muted  src="./10 second intro music.mp4"></video>
+                <h3 class="title">03 first video</h3>
+            </div>
+            <div class="vidcard">
+                <video autoplay muted  src="./10 second intro music.mp4"></video>
+                <h3 class="title">04 first video</h3>
+            </div>
+            <div class="vidcard">
+                <video autoplay muted  src="./10 second intro music.mp4"></video>
+                <h3 class="title">05 first video</h3>
+            </div>
+            <div class="vidcard">
+                <video autoplay muted  src="./10 second intro music.mp4"></video>
+                <h3 class="title">03 first video</h3>
+            </div>
+            <div class="vidcard">
+                <video autoplay muted  src="./10 second intro music.mp4"></video>
+                <h3 class="title">04 first video</h3>
+            </div>
+            <div class="vidcard">
+                <video autoplay muted  src="./10 second intro music.mp4"></video>
+                <h3 class="title">05 first video</h3>
+            </div>
+
+            <div class="vidcard">
+                <video autoplay muted  src="./10 second intro music.mp4"></video>
+                <h3 class="title">03 first video</h3>
+            </div>
+            <div class="vidcard">
+                <video autoplay muted  src="./10 second intro music.mp4"></video>
+                <h3 class="title">04 first video</h3>
+            </div>
+            <div class="vidcard">
+                <video autoplay muted  src="./10 second intro music.mp4"></video>
+                <h3 class="title">05 first video</h3>
+            </div>
+            <div class="vidcard">
+                <video autoplay muted  src="./10 second intro music.mp4"></video>
+                <h3 class="title">03 first video</h3>
+            </div>
+            <div class="vidcard">
+                <video autoplay muted  src="./10 second intro music.mp4"></video>
+                <h3 class="title">04 first video</h3>
+            </div>
+            <div class="vidcard">
+                <video autoplay muted  src="./10 second intro music.mp4"></video>
+                <h3 class="title">05 first video</h3>
+            </div>
+
+            <div class="vidcard">
+                <video autoplay muted  src="./10 second intro music.mp4"></video>
+                <h3 class="title">03 first video</h3>
+            </div>
+            <div class="vidcard">
+                <video autoplay muted  src="./10 second intro music.mp4"></video>
+                <h3 class="title">04 first video</h3>
+            </div>
+            <div class="vidcard">
+                <video autoplay muted  src="./10 second intro music.mp4"></video>
+                <h3 class="title">05 first video</h3>
             </div>
             <div class="vidcard">
                 <video autoplay muted  src="./10 second intro music.mp4"></video>
@@ -47,6 +122,23 @@
             </div>
         </div>
     </div>
-    
+    <script>
+        const listVideo = document.querySelectorAll('.videolist .vidcard')
+        const mainVideo = document.querySelector('main-video .vid ')
+        listVideo.forEach((video)=>{
+            video.addEventListener('click',()=>{
+                listVideo.forEach((item)=>{
+                    item.classList.remove('active')
+                })
+                video.classList.add('active')
+                if(video.classList.contains('active')){
+                    let newSrc = video.children[0].getAttribute('src');
+                    mainVideo.src = newSrc
+                }
+            })
+
+
+        })
+    </script>
 </body>
 </html>

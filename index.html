@@ -21,7 +21,7 @@
                 <h3 class="title">01 first video</h3>
             </div>
             <div class="vidcard">
-                <video autoplay muted  src="./10 second intro music.mp4"></video>
+                <video autoplay muted  src="./10 SECONDS VIDEO CLIP.mp4"></video>
                 <h3 class="title">03 first video</h3>
             </div>
             <div class="vidcard">
@@ -29,7 +29,7 @@
                 <h3 class="title">04 first video</h3>
             </div>
             <div class="vidcard">
-                <video autoplay muted  src="./10 second intro music.mp4"></video>
+                <video autoplay muted  src="./10 SECONDS VIDEO CLIP.mp4"></video>
                 <h3 class="title">05 first video</h3>
             </div>
 
@@ -38,7 +38,7 @@
                 <h3 class="title">03 first video</h3>
             </div>
             <div class="vidcard">
-                <video autoplay muted  src="./10 second intro music.mp4"></video>
+                <video autoplay muted  src="./10 SECONDS VIDEO CLIP.mp4"></video>
                 <h3 class="title">04 first video</h3>
             </div>
             <div class="vidcard">
@@ -46,7 +46,7 @@
                 <h3 class="title">05 first video</h3>
             </div>
             <div class="vidcard">
-                <video autoplay muted  src="./10 second intro music.mp4"></video>
+                <video autoplay muted  src="./10 SECONDS VIDEO CLIP.mp4"></video>
                 <h3 class="title">03 first video</h3>
             </div>
             <div class="vidcard">
@@ -124,7 +124,9 @@
     </div>
     <script>
         const listVideo = document.querySelectorAll('.videolist .vidcard')
-        const mainVideo = document.querySelector('main-video .vid ')
+        const mainVideo = document.querySelector('.main-video .vid video ')
+        let tittle = document.querySelector('.main-video .vid .title')
+        console.log(tittle.innerHTML)
         listVideo.forEach((video)=>{
             video.addEventListener('click',()=>{
                 listVideo.forEach((item)=>{
@@ -133,7 +135,9 @@
                 video.classList.add('active')
                 if(video.classList.contains('active')){
                     let newSrc = video.children[0].getAttribute('src');
+                    let newTitle= video.children[1].innerHTML
                     mainVideo.src = newSrc
+                    tittle.innerHTML = newTitle
                 }
             })
 

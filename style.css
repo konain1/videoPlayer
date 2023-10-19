@@ -1,0 +1,58 @@
+body{
+    background-color: antiquewhite;
+}
+.container{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 15px;
+    align-items: flex-start;
+    padding: 5px  5%;
+    background-color: rgb(209, 214, 218);
+    border: 10px solid black;
+    height: 750px;
+    overflow-y: scroll;
+}
+.main-video{
+    border-radius: 10px;
+    background-color: rgb(172, 184, 184);
+    border: 1px solid black;
+
+}
+.vid{
+    border-radius: 10px;
+    height: 68%;
+    padding: 20px;
+    width: 94%;
+}
+.vid video{
+    height: 100%;
+    width: 100%;
+
+}
+.videolist{
+    width: 300px;
+    background-color: rgb(88, 93, 97);
+    height: 90%;
+    overflow-y: scroll;
+    border-radius: 10px;
+}
+.videolist::-webkit-scrollbar{
+    width: 7px;
+}
+
+.videolist::-webkit-scrollbar-thumb{
+ background-color: #f6e5e5;
+ border-radius: 50px;
+
+}
+.videolist::-webkit-scrollbar-track{
+    background-color: #ebe1e1;
+    border-radius: 50px;
+   }
+.videolist .vidcard{
+    width: 300px;
+    margin: 10px;
+}
+.vidcard video{
+    width: 40%;
+}
